@@ -1,3 +1,43 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
 body {
-	color: red;
+/*	color: red;*/
+	color: #1a1a1a;
+}
+
+.nav-bar {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	background: grey;
+	padding: 25px 100px;
+	top: 0;
+}
+.home-page-project-grid {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 100px;
+}
+.project {
+	width: 66.6666%;
+	margin: 50px 0px;
+/*	padding: 100px;*/
+}
+.grid-left {
+	align-self: flex-start;
+/*	background: orange;*/
+}
+.grid-right {
+	align-self: flex-end;
+/*	background: blue;*/
+}
+.project-grid-image img {
+	width: 100%;
+	height: auto;
+}
+.project-grid-description {
+	margin-top: 10px;
 }
