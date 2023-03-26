@@ -1,12 +1,27 @@
 * {
 	box-sizing: border-box;
-	margin: 0;
 }
 body {
-/*	color: red;*/
 	color: #1a1a1a;
+	padding: 0;
+	margin: 0;
+	min-width: 100%;
+	max-width: 100%;
+	height: auto;
+	background: #FFFFFF;
+	overflow-x: hidden;
 }
-
+a {
+	text-decoration: none;
+	cursor: pointer !important;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+p {
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 5px 0px;
+}
 .nav-bar {
 	display: flex;
 	width: 100%;
@@ -28,11 +43,9 @@ body {
 }
 .grid-left {
 	align-self: flex-start;
-/*	background: orange;*/
 }
 .grid-right {
 	align-self: flex-end;
-/*	background: blue;*/
 }
 .project-grid-image img {
 	width: 100%;
@@ -40,4 +53,43 @@ body {
 }
 .project-grid-description {
 	margin-top: 10px;
+}
+.project-thumbnail {
+
+}
+
+/* ------------------------------------------------ L BREAKPOINT */
+
+@media only screen and (max-width: 1200px) {
+	.home-page-project-grid {
+		margin: 100px 25px;
+	}
+}
+
+/* ------------------------------------------------ M BREAKPOINT */
+
+@media only screen and (max-width: 1024px) {
+	.home-page-project-grid {
+		margin: 100px 25px;
+	}
+}
+
+/* ------------------------------------------------ S BREAKPOINT */
+
+@media only screen and (max-width: 768px) {
+	.home-page-project-grid {
+		margin: 100px 25px;
+	}
+}
+
+/* ------------------------------------------------ XS BREAKPOINT */
+
+@media only screen and (max-width: 480px) {
+	.home-page-project-grid {
+		margin: 100px 25px;
+	}
+	.project {
+    	width: 100%;
+    	margin: 25px 0px;
+	}
 }
