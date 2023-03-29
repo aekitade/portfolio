@@ -1,3 +1,5 @@
+/* ------------------------------------------------ FULL SITE STYLING */
+
 * {
 	box-sizing: border-box;
 }
@@ -18,29 +20,69 @@ a {
 }
 p {
 	margin: 0;
+	font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 5px 0px;
 }
+/* ------------------------------------------------ NAV BAR STYLING */
 .nav-bar {
 	display: flex;
 	width: 100%;
 	position: fixed;
-	background: grey;
+	background: white;
 	padding: 25px 100px;
 	top: 0;
+	justify-content: space-between;
 }
+
+/* ------------------------------------------------ FOOTER STYLING */
+.footer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+/*	position: fixed;*/
+	background: black;
+	padding: 25px 100px;
+	top: 0;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.footer-row:first-child {
+	margin-bottom: 50px;
+}
+.footer-row {
+	flex: 1;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.footer-link {
+	flex: 1;
+}
+.footer-about {
+	flex: 2;
+}
+.footer a {
+	color: white;
+}
+
+/* ------------------------------------------------ HOME PAGE STYLING */
+
 .home-page-project-grid {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	margin: 100px;
+	margin: 68px 100px 0px 100px;
 }
 .project {
 	width: 66.6666%;
 	margin: 50px 0px;
 /*	padding: 100px;*/
 }
+/*.project:first-child {
+	margin-top: 0;
+}*/
 .grid-left {
 	align-self: flex-start;
 }
@@ -58,38 +100,88 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+
+/* ------------------------------------------------ ABOUT PAGE STYLING */
+
+.about-columns {
+	display: flex;
+	gap: 50px;
+/*	margin: 68px 100px 0px 100px;*/
+	margin: 100px;
+}
+.about-photo, .about-description {
+	height: auto;
+	flex: 1;
+/*	padding: 50px;*/
+}
+.about-photo img {
+	width: 100%;
+}
+.about-description {
+/*	width: 50%;*/
+	height: auto;
+	flex: 1;
+}
+
+
+
+/* ------------------------------------------------ MEDIA QUERIES */
+
+
 /* ------------------------------------------------ L BREAKPOINT */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
 	.home-page-project-grid {
-		margin: 100px 25px;
+/*		margin: 100px 50px;*/
 	}
 }
 
 /* ------------------------------------------------ M BREAKPOINT */
 
 @media only screen and (max-width: 1024px) {
-	.home-page-project-grid {
-		margin: 100px 25px;
+	.home-page-project-grid, .about-columns {
+		margin: 100px 50px;
+	}
+	.nav-bar {
+		padding: 25px 50px;
 	}
 }
 
 /* ------------------------------------------------ S BREAKPOINT */
 
 @media only screen and (max-width: 768px) {
-	.home-page-project-grid {
+	.home-page-project-grid, .about-columns  {
 		margin: 100px 25px;
+	}
+	.nav-bar {
+		padding: 25px;
+	}
+	.project {
+		width: 75%;
 	}
 }
 
 /* ------------------------------------------------ XS BREAKPOINT */
 
 @media only screen and (max-width: 480px) {
-	.home-page-project-grid {
+	.home-page-project-grid, .about-columns  {
 		margin: 100px 25px;
+	}
+	.home-page-project-grid {
+		gap: 50px;
+	}
+	.about-columns {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.about-description, .about-photo {
+/*		padding: 25px 0px;*/
+	}
+	.nav-bar {
+		padding: 25px;
 	}
 	.project {
     	width: 100%;
-    	margin: 25px 0px;
+    	margin: 0px;
 	}
 }
