@@ -20,7 +20,7 @@ a {
 }
 p {
 	margin: 0;
-	font-size: 16px;
+	font-size: 18px;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 5px 0px;
@@ -37,11 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------------------------------------------------ FOOTER STYLING */
-.footer {
+/*.footer {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-/*	position: fixed;*/
 	background: black;
 	padding: 25px 100px;
 	top: 0;
@@ -65,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer a {
 	color: white;
-}
+}*/
 
 /* ------------------------------------------------ HOME PAGE STYLING */
 
@@ -89,18 +88,65 @@ h1, h2, h3, h4, h5, h6 {
 .grid-right {
 	align-self: flex-end;
 }
-.project-grid-image img {
+.home-page-grid-image img {
 	width: 100%;
 	height: auto;
 }
-.project-grid-description {
+.home-page-grid-description {
 	margin-top: 10px;
 }
-.project-thumbnail {
+/*.project-thumbnail {
 
+}*/
+
+/* ------------------------------------------------ PROJECT PAGE STYLING */
+
+.project-page-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 68px 100px 0px 100px;
 }
 
-
+.project-hero-image, .project-image-landscape, .project-image-portrait, .project-image-square {
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+.project-image-landscape, .project-image-portrait, .project-image-square {
+	max-width: 800px;
+}
+.project-hero-image img, .project-image-square img, .project-image-portrait img {
+	max-height: 800px;
+}
+.project-hero-image img {
+	max-width: 1200px;
+}
+.project-hero-image img, .project-image-square img, .project-image-portrait img, .project-image-landscape img {
+	width: 100%;
+}
+.project-image-landscape img {
+	max-width: 800px;
+	height: auto;
+}
+.project-text {
+	margin: 0 auto;
+	max-width: 800px;
+}
+.project-title {
+	margin-top: 15px;
+}
+.project-description {
+	max-width: 800px;
+}
+.image-caption {
+	margin-top: 15px;
+	max-width: inherit !important;
+}
+.project-navigation {
+	display: flex;
+	padding: 0 100px 100px 100px;
+	justify-content: space-between;
+}
 /* ------------------------------------------------ ABOUT PAGE STYLING */
 
 .about-columns {
@@ -134,15 +180,18 @@ h1, h2, h3, h4, h5, h6 {
 	.home-page-project-grid {
 /*		margin: 100px 50px;*/
 	}
+	.project-hero-image img, .project-image-square img, .project-image-portrait img {
+		max-height: 600px;
+	}
 }
 
 /* ------------------------------------------------ M BREAKPOINT */
 
 @media only screen and (max-width: 1024px) {
-	.home-page-project-grid, .about-columns {
+	.home-page-project-grid, .about-columns, .project-page-container {
 		margin: 100px 50px;
 	}
-	.nav-bar {
+	.nav-bar, .project-navigation {
 		padding: 25px 50px;
 	}
 }
@@ -150,21 +199,27 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------------------------------------ S BREAKPOINT */
 
 @media only screen and (max-width: 768px) {
-	.home-page-project-grid, .about-columns  {
+	.home-page-project-grid, .about-columns, .project-page-container  {
 		margin: 100px 25px;
 	}
-	.nav-bar {
+	.nav-bar, .project-navigation {
 		padding: 25px;
 	}
 	.project {
 		width: 75%;
+	}
+	.project-hero-image img, .project-image-square img, .project-image-portrait img {
+		max-height: 600px;
+	}
+	.project-image-landscape img {
+		max-width: 600px;
 	}
 }
 
 /* ------------------------------------------------ XS BREAKPOINT */
 
 @media only screen and (max-width: 480px) {
-	.home-page-project-grid, .about-columns  {
+	.home-page-project-grid, .about-columns, .project-page-container  {
 		margin: 100px 25px;
 	}
 	.home-page-project-grid {
@@ -177,11 +232,15 @@ h1, h2, h3, h4, h5, h6 {
 	.about-description, .about-photo {
 /*		padding: 25px 0px;*/
 	}
-	.nav-bar {
+	.nav-bar, .project-navigation {
 		padding: 25px;
 	}
 	.project {
     	width: 100%;
     	margin: 0px;
+	}
+	.project-hero-image, .project-image-landscape, .project-image-portrait, .project-image-square {
+		margin: 0 auto;
+		margin-bottom: 50px;
 	}
 }
