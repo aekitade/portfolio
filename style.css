@@ -1,3 +1,31 @@
+/*-------------------------------- FONTS --------------------------------*/
+
+	@font-face {
+		font-family: Avenir-Next-UltraLight;
+		src: url(assets/fonts/avenir-next/AvenirNext-UltraLight.otf);
+	}
+	@font-face {
+		font-family: Avenir-Next-Regular;
+		src: url(assets/fonts/avenir-next/AvenirNext-Regular.otf);
+	}
+	@font-face {
+		font-family: Avenir-Next-Medium;
+		src: url(assets/fonts/avenir-next/AvenirNext-Medium.otf);
+	}
+	@font-face {
+		font-family: Avenir-Next-DemiBold;
+		src: url(assets/fonts/avenir-next/AvenirNext-DemiBold.otf);
+	}
+	@font-face {
+		font-family: Avenir-Next-Bold;
+		src: url(assets/fonts/avenir-next/AvenirNext-Bold.otf);
+	}
+	@font-face {
+		font-family: Avenir-Next-Heavy;
+		src: url(assets/fonts/avenir-next/AvenirNext-Heavy.otf);
+	}
+	
+
 /* ------------------------------------------------ FULL SITE STYLING */
 
 * {
@@ -13,18 +41,27 @@ body {
 	background: #FFFFFF;
 	overflow-x: hidden;
 	background: #FFFFFF;
+	font-family: Avenir-Next-Regular;
+/*	font-family: Avenir-Next-UltraLight;*/
 }
 a {
 	text-decoration: none;
+	color: black !important;
 	cursor: pointer !important;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 p {
 	margin: 0;
 	font-size: 18px;
+	font-family: Avenir-Next-Regular;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 5px 0px;
+	font-family: Avenir-Next-Regular;
+/*	font-family: Avenir-Next-UltraLight;*/
+}
+h1 {
+	font-size: 50px;
 }
 /* ------------------------------------------------ NAV BAR STYLING */
 .nav-bar {
@@ -132,6 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 .project-text {
 	margin: 0 auto;
 	max-width: 800px;
+	text-align: center;
 }
 .project-title {
 	margin-top: 15px;
@@ -142,6 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 .image-caption {
 	margin-top: 15px;
 	max-width: inherit !important;
+	text-align: center;
 }
 .project-navigation {
 	display: flex;
