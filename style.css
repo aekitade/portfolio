@@ -140,6 +140,8 @@ h4 {
 	flex-direction: column;
 	flex-wrap: wrap;
 	margin: 68px 100px 0px 100px;
+	/*max-width: 2560px;
+	margin: 0 auto;*/
 }
 .project {
 	width: 66.6666%;
