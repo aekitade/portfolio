@@ -84,6 +84,7 @@ h1 {
 }
 h2 {
 	font-size: 36px;
+	width: 100%;
 }
 h3 {
 	font-size: 24px;
@@ -101,6 +102,7 @@ h4 {
 	top: 0;
 	justify-content: space-between;
 	font-family: Avenir-Next-Medium;
+	z-index: 99999;
 }
 
 /* ------------------------------------------------ FOOTER STYLING */
@@ -157,9 +159,19 @@ h4 {
 .grid-right {
 	align-self: flex-end;
 }
+.home-page-grid-image {
+	overflow: hidden;
+	background: black;
+}
 .home-page-grid-image img {
 	width: 100%;
+	transform: scale(1.02);
 	height: auto;
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	-ms-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
 }
 .home-page-grid-description {
 	margin-top: 10px;
@@ -244,7 +256,45 @@ h4 {
 	flex: 1;
 }
 
+/* ------------------------------------------------ HOVER STATES */
 
+.underline { 
+	position: relative;
+}
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    display: block;
+    margin-top: -3px;
+    /* right: 0; */
+    left: 0;
+    background: black;
+    -webkit-transition: .25s cubic-bezier(.92,0,.5,1);
+    -moz-transition: .25s cubic-bezier(.92,0,.5,1);
+    -o-transition: .25s cubic-bezier(.92,0,.5,1);
+    -ms-transition: .25s cubic-bezier(.92,0,.5,1);
+    transition: .25s cubic-bezier(.92,0,.5,1);
+}
+.underline:hover:after, .project-thumbnail:hover .underline:after {
+	width: 100%;
+  	left: 0;
+  	-webkit-transition: .25s cubic-bezier(.92,0,.5,1);
+	-moz-transition: .25s cubic-bezier(.92,0,.5,1);
+	-o-transition: .25s cubic-bezier(.92,0,.5,1);
+	-ms-transition: .25s cubic-bezier(.92,0,.5,1);
+	transition: .25s cubic-bezier(.92,0,.5,1);
+}
+.project-thumbnail:hover .home-page-grid-image img {
+	transform: scale(1.1);
+	opacity: 0.5;
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	-ms-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
 
 /* ------------------------------------------------ MEDIA QUERIES */
 
