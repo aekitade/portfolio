@@ -43,7 +43,12 @@ body {
 	background: #FFFFFF;
 	font-family: Avenir-Next-Regular;
 /*	font-family: Avenir-Next-UltraLight;*/
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
 }
+body::-webkit-scrollbar{
+    display: none;
+  }
 a {
 	text-decoration: none;
 	color: black !important;
@@ -66,10 +71,10 @@ a {
 h2:hover::before {
 	transform-origin: left;
 	transform: scaleX(1);
-}
+}*/
 a:hover {
 	cursor: pointer !important;
-}*/
+}
 p {
 	margin: 0;
 	font-size: 16px;
@@ -92,6 +97,15 @@ h3 {
 h4 {
 	font-size: 18px;
 }
+
+/* ----------------------------- text highight color if you want it */
+/*::selection {
+	text-shadow: 1px 2px blue;
+	color: white;
+	background-color: black;
+}*/
+
+
 /* ------------------------------------------------ NAV BAR STYLING */
 .nav-bar {
 	display: flex;
@@ -187,6 +201,7 @@ h4 {
 	flex-direction: column;
 	flex-wrap: wrap;
 	margin: 68px 100px 0px 100px;
+
 }
 
 .project-hero-image, .project-image-landscape, .project-image-portrait, .project-image-square {
@@ -195,6 +210,9 @@ h4 {
 }
 .project-image-landscape, .project-image-portrait, .project-image-square {
 	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+/*	align-items: flex-start;*/
 }
 .project-hero-image img, .project-image-square img, .project-image-portrait img {
 	max-height: 800px;
@@ -202,8 +220,11 @@ h4 {
 .project-hero-image img {
 	max-width: 1200px;
 }
-.project-hero-image img, .project-image-square img, .project-image-portrait img, .project-image-landscape img {
+.project-hero-image img, .project-image-square img, .project-image-landscape img {
 	width: 100%;
+}
+.project-image-portrait img {
+	width: auto;
 }
 .project-image-landscape img {
 	max-width: 800px;
@@ -216,6 +237,7 @@ h4 {
 }
 .project-title {
 	margin-top: 15px;
+	line-height: 1.2em;
 }
 .project-description {
 	max-width: 800px;
@@ -240,7 +262,9 @@ h4 {
 	display: flex;
 	gap: 50px;
 /*	margin: 68px 100px 0px 100px;*/
-	margin: 100px;
+	margin: 150px auto;
+	max-width: 1100px;
+/*	justify-content: center;*/
 }
 .about-photo, .about-description {
 	height: auto;
@@ -249,12 +273,16 @@ h4 {
 }
 .about-photo img {
 	width: 100%;
+/*	transform: scale(1.01);*/
 }
 .about-description {
 /*	width: 50%;*/
 	height: auto;
-	flex: 1;
+	flex: 2;
 }
+/*.about-description p {
+	width: 600px;
+}*/
 .contact-info {
 	font-family: Avenir-Next-Medium;
 }
@@ -357,7 +385,7 @@ h4 {
 		font-size: 18px;
 	}
 	.home-page-project-grid, .about-columns, .project-page-container  {
-		margin: 100px 25px;
+		margin: 100px 25px 25px 25px;
 	}
 	.home-page-project-grid {
 		gap: 50px;
