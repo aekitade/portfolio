@@ -41,8 +41,8 @@ body {
 	background: #FFFFFF;
 	overflow-x: hidden;
 	background: #FFFFFF;
-	-webkit-font-smoothing: subpixel-antialiased !important; 
-    text-rendering:optimizeLegibility !important;
+	/*-webkit-font-smoothing: subpixel-antialiased !important; 
+    text-rendering:optimizeLegibility !important;*/
 	font-family: Avenir-Next-Regular;
 /*	font-family: Avenir-Next-UltraLight;*/
 	-ms-overflow-style: none;
@@ -84,7 +84,8 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 5px 0px;
-	text-rendering: ;
+	font-weight: normal !important;
+	font-style: normal !important;
 /*	font-family: Avenir-Next-UltraLight;*/
 }
 h1 {
